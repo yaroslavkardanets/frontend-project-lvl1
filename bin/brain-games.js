@@ -1,3 +1,5 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 
-Welcome to the Brain Games!
+console.log("Welcome to the Brain Games!");
+
+import name from ../src/cls.js
