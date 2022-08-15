@@ -1,12 +1,14 @@
 import readlineSync from 'readline-sync';
 
-import userName from './userName.js';
+import userName from '../src/userName.js';
+
+const generateRandomNumber = () => Math.round(Math.random() * 100);
 
 const gameRound = () => {
-  const generateRandomNumber = Math.round(Math.random() * 100);
-  console.log(`Question: ${generateRandomNumber}`);
+  const randomNumber = generateRandomNumber();
+  console.log(`Question: ${randomNumber}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const isEven = generateRandomNumber % 2 === 0;
+  const isEven = randomNumber % 2 === 0;
 
   if ((isEven && userAnswer === 'yes') || (!isEven && userAnswer === 'no')) {
     console.log('Correct!');
