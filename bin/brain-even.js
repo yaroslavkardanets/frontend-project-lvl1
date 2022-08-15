@@ -1,8 +1,7 @@
 #!/usr/bin/env node;
-import greeting from '../src/greeting.js';
-import userName from '../src/userName.js';
+import greeting from '../src/index.js';
+import { userName, evenGameRules } from '../src/index.js';
 import fullGame from '../games/even.js';
-import evenGameRules from '../src/even-rules.js';
 
 greeting();
 console.log(`Hello, ${userName}!`);

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import userName from '../src/userName.js';
+import { userName } from '../src/index.js';
 
 const generateRandomNumber = () => Math.round(Math.random() * 100);
 
