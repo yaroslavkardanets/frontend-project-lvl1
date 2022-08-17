@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-import evenGameRules from '../src/index.js';
-// import { hello, greeting, userName } from '../src/index.js';
+import evenGameRules from '../src/even-rules.js';
+import hello from '../src/index.js';
 import fullGame from '../games/even.js';
 
 // greeting();
-// hello();
+hello();
 evenGameRules();
 fullGame();

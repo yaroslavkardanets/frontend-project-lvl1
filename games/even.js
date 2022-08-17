@@ -18,6 +18,7 @@ const gameRound = () => {
   return false;
 };
 
+// Надо подумать, как этот модуль будет работать с разными играми
 const fullGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const game = gameRound();
