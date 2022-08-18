@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
 
 import { userName } from '../src/index.js';
-
-const generateRandomNumber = () => Math.round(Math.random() * 100);
+import generateRandomNumber from '../src/generate-random-number.js';
 
 const gameRound = () => {
   const randomNumber = generateRandomNumber();
