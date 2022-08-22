@@ -3,18 +3,41 @@ import readlineSync from 'readline-sync';
 import { userName } from '../src/index.js';
 import generateRandomNumber from '../src/generate-random-number.js';
 
+const randomNumber1 = generateRandomNumber();
+// console.log(`число 1 = ${randomNumber1}`);
+const randomNumber2 = generateRandomNumber();
+// console.log(`число 2 = ${randomNumber2}`);
+
+const greatestDivisor = () => {
+  const biggestNumber = Math.max(randomNumber1, randomNumber2);
+  const smallestNumber = Math.min(randomNumber1, randomNumber2);
+  console.log(`--- biggestNumber = ${biggestNumber}`);
+  console.log(`--- smallestNumber = ${smallestNumber}`);
+  if (smallestNumber === 0 || smallestNumber === 1) {
+    return smallestNumber;
+  }
+
+  for (let i = smallestNumber; i >= 0; i -= 1) {
+    if (smallestNumber % i === 0 && Number.isInteger(biggestNumber / i)) {
+      // if (Number.isInteger(biggestNumber / i)) {
+      // console.log('i = ', i);
+      return i;
+      // }
+    }
+  }
+};
+
 const gameRound = () => {
-  const randomNumber1 = generateRandomNumber();
-  const randomNumber2 = generateRandomNumber();
-
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+  console.log(`--- greatestDivisor = ${greatestDivisor()}`);
   const userAnswer = readlineSync.question('Your answer: ');
+  console.log(`--- userAnswer = ${userAnswer}`);
 
-  if (`${result}` === `${userAnswer}`) {
+  if (`${greatestDivisor()}` === `${userAnswer}`) {
     console.log('Correct!');
     return true;
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${greatestDivisor()}'.`);
   return false;
 };
 
