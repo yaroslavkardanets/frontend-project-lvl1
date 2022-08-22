@@ -3,14 +3,20 @@ import readlineSync from 'readline-sync';
 import { userName } from '../src/index.js';
 import generateRandomNumber from '../src/generate-random-number.js';
 
-const randomNumber1 = generateRandomNumber();
-// console.log(`число 1 = ${randomNumber1}`);
-const randomNumber2 = generateRandomNumber();
-// console.log(`число 2 = ${randomNumber2}`);
+const randomNumbers = () => {
+  const randomNumber1 = generateRandomNumber();
+  console.log(`число 1 = ${randomNumber1}`);
+  const randomNumber2 = generateRandomNumber();
+  console.log(`число 2 = ${randomNumber2}`);
+  const result = [randomNumber1, randomNumber2];
+  return result;
+};
+console.log(`randomNumbers = ${randomNumbers()}`);
 
 const greatestDivisor = () => {
-  const biggestNumber = Math.max(randomNumber1, randomNumber2);
-  const smallestNumber = Math.min(randomNumber1, randomNumber2);
+  console.log(randomNumbers([0]));
+  const biggestNumber = Math.max(randomNumbers([0]), randomNumbers([1]));
+  const smallestNumber = Math.min(randomNumbers([0]), randomNumbers([1]));
   console.log(`--- biggestNumber = ${biggestNumber}`);
   console.log(`--- smallestNumber = ${smallestNumber}`);
   if (smallestNumber === 0 || smallestNumber === 1) {
@@ -28,7 +34,7 @@ const greatestDivisor = () => {
 };
 
 const gameRound = () => {
-  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
+  console.log(`Question: ${randomNumbers[0]} ${randomNumbers[1]}`);
   console.log(`--- greatestDivisor = ${greatestDivisor()}`);
   const userAnswer = readlineSync.question('Your answer: ');
   console.log(`--- userAnswer = ${userAnswer}`);
