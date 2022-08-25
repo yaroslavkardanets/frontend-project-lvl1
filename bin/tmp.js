@@ -1,27 +1,25 @@
-const generateRandomNumber = () => Math.round(Math.random() * 100);
+// import generateRandomNumber from '../src/generate-random-number.js';
+import generateRandomRange from '../src/generate-random-range.js';
 
-const randomNumber1 = generateRandomNumber();
-console.log(`число 1 = ${randomNumber1}`);
-const randomNumber2 = generateRandomNumber();
-console.log(`число 2 = ${randomNumber2}`);
+const gameRound = () => {
+  const range = [];
+  const rangeStart = generateRandomRange(0, 50);
+  console.log(`rangeStart = ${rangeStart}`);
+  const rangeSteps = generateRandomRange(5, 10);
+  console.log(`rangeSteps = ${rangeSteps}`);
+  const rangeStep = generateRandomRange(1, 10);
+  console.log(`rangeStep = ${rangeStep}`);
+  const rangeStop = rangeStart + (rangeStep * rangeSteps);
+  const missingNumber = generateRandomRange(0, rangeSteps);
 
-const greatestDivisor = () => {
-  const biggestNumber = Math.max(randomNumber1, randomNumber2);
-  const smallestNumber = Math.min(randomNumber1, randomNumber2);
-  console.log(`biggestNumber = ${biggestNumber}`);
-  console.log(`smallestNumber = ${smallestNumber}`);
-  if (smallestNumber === 0 || smallestNumber === 1) {
-    return smallestNumber;
+  for (let i = rangeStart; i < rangeStop; i += rangeStep) {
+    // console.log('i =', i);
+    range.push(i);
   }
-
-  for (let i = smallestNumber; i >= 0; i -= 1) {
-    if (smallestNumber % i === 0 /* && Number.isInteger(biggestNumber / i) */) {
-      if (Number.isInteger(biggestNumber / i)) {
-        console.log('i = ', i);
-        return i;
-      }
-    }
-  }
+  console.log(`range = ${range}`);
+  range[missingNumber] = '...';
+  console.log(`rangeMissing = ${range}`);
+  return range;
 };
-console.log('Answer:');
-console.log(greatestDivisor());
+
+gameRound();
