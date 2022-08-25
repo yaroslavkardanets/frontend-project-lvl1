@@ -2,13 +2,14 @@ import readlineSync from 'readline-sync';
 
 import { userName } from '../src/index.js';
 import generateRandomNumber from '../src/generate-random-number.js';
+import generateRandomRange from '../src/generate-random-range.js';
 
-const generateRandomOperation = (min, max) => Math.round(Math.random() * (max - min) + min);
+// const generateRandomOperation = (min, max) => Math.round(Math.random() * (max - min) + min);
 
 const gameRound = () => {
   const randomNumber1 = generateRandomNumber();
   const randomNumber2 = generateRandomNumber();
-  const random = generateRandomOperation(1, 3);
+  const random = generateRandomRange(1, 3);
   let operation;
   let result;
   if (random === 1) {
