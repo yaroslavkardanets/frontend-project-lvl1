@@ -1,4 +1,5 @@
-// import generateRandomNumber from '../src/generate-random-number.js';
+import readlineSync from 'readline-sync';
+
 import generateRandomRange from '../src/generate-random-range.js';
 
 const gameRound = () => {
@@ -17,9 +18,20 @@ const gameRound = () => {
     range.push(i);
   }
   console.log(`range = ${range}`);
+  const getMissingNumber = range[missingNumber];
+  console.log(`getMissingNumber = ${getMissingNumber}`);
   range[missingNumber] = '...';
   console.log(`rangeMissing = ${range}`);
-  return range;
+  // return range;
+  console.log(`Question: ${range}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+
+  if (`${getMissingNumber}` === `${userAnswer}`) {
+    console.log('Correct!');
+    return true;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${getMissingNumber}'.`);
+  return false;
 };
 
 gameRound();
