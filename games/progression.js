@@ -6,11 +6,11 @@ import generateRandomRange from '../src/generate-random-range.js';
 const gameRound = () => {
   const range = [];
   const rangeStart = generateRandomRange(0, 50);
-  console.log(`rangeStart = ${rangeStart}`);
+  // console.log(`rangeStart = ${rangeStart}`);
   const rangeSteps = generateRandomRange(5, 10);
-  console.log(`rangeSteps = ${rangeSteps}`);
+  //   console.log(`rangeSteps = ${rangeSteps}`);
   const rangeStep = generateRandomRange(1, 10);
-  console.log(`rangeStep = ${rangeStep}`);
+  //   console.log(`rangeStep = ${rangeStep}`);
   const rangeStop = rangeStart + (rangeStep * rangeSteps);
   const missingNumber = generateRandomRange(0, rangeSteps);
 
@@ -18,11 +18,11 @@ const gameRound = () => {
     // console.log('i =', i);
     range.push(i);
   }
-  console.log(`range = ${range}`);
+  //   console.log(`range = ${range}`);
   const getMissingNumber = range[missingNumber];
-  console.log(`getMissingNumber = ${getMissingNumber}`);
+  //   console.log(`getMissingNumber = ${getMissingNumber}`);
   range[missingNumber] = '...';
-  console.log(`rangeMissing = ${range}`);
+  //   console.log(`rangeMissing = ${range}`);
   // return range;
   console.log(`Question: ${range}`);
   const userAnswer = readlineSync.question('Your answer: ');
