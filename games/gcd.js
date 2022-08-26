@@ -12,8 +12,8 @@ const gameRound = () => {
   const greatestDivisor = () => {
     const biggestNumber = Math.max(randomNumber1, randomNumber2);
     const smallestNumber = Math.min(randomNumber1, randomNumber2);
-    console.log(`--- biggestNumber = ${biggestNumber}`);
-    console.log(`--- smallestNumber = ${smallestNumber}`);
+    // console.log(`--- biggestNumber = ${biggestNumber}`);
+    // console.log(`--- smallestNumber = ${smallestNumber}`);
     if (smallestNumber === 0 || smallestNumber === 1) {
       return smallestNumber;
     }
@@ -31,7 +31,7 @@ const gameRound = () => {
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
   console.log(`--- greatestDivisor = ${greatestDivisor()}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  console.log(`--- userAnswer = ${userAnswer}`);
+  // console.log(`--- userAnswer = ${userAnswer}`);
 
   if (`${greatestDivisor()}` === `${userAnswer}`) {
     console.log('Correct!');
