@@ -1,27 +1,28 @@
-const generateRandomNumber = () => Math.round(Math.random() * 100);
+import readlineSync from 'readline-sync';
 
-const randomNumber1 = generateRandomNumber();
-console.log(`число 1 = ${randomNumber1}`);
-const randomNumber2 = generateRandomNumber();
-console.log(`число 2 = ${randomNumber2}`);
+import generateRandomNumber from '../src/generate-random-number.js';
 
-const greatestDivisor = () => {
-  const biggestNumber = Math.max(randomNumber1, randomNumber2);
-  const smallestNumber = Math.min(randomNumber1, randomNumber2);
-  console.log(`biggestNumber = ${biggestNumber}`);
-  console.log(`smallestNumber = ${smallestNumber}`);
-  if (smallestNumber === 0 || smallestNumber === 1) {
-    return smallestNumber;
-  }
+const randomNumber = generateRandomNumber();
 
-  for (let i = smallestNumber; i >= 0; i -= 1) {
-    if (smallestNumber % i === 0 /* && Number.isInteger(biggestNumber / i) */) {
-      if (Number.isInteger(biggestNumber / i)) {
-        console.log('i = ', i);
-        return i;
+const isPrime = () => {
+  console.log(randomNumber);
+  if (randomNumber === 0 || randomNumber === 1 || randomNumber === 2) {
+    return true;
+  } if (randomNumber % 2 === 0) {
+    return false;
+  } if (randomNumber % 2 !== 0) {
+    const arr = [];
+    for (let i = 3; i < randomNumber / 2; i += 2) {
+      if (Number.isInteger(randomNumber / i)) {
+        arr.push(i);
+        console.log(arr);
       }
     }
+    if (arr.length > 0) {
+      return false;
+    }
+    return true;
   }
 };
-console.log('Answer:');
-console.log(greatestDivisor());
+console.log(isPrime());
+isPrime();
