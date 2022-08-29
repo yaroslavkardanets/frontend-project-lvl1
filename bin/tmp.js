@@ -1,5 +1,3 @@
-import readlineSync from 'readline-sync';
-
 import generateRandomNumber from '../src/generate-random-number.js';
 
 const randomNumber = generateRandomNumber();
