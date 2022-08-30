@@ -22,10 +22,6 @@ const gameRound = () => {
 
   console.log(`What is the result of the expression?: ${operation}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  // console.log('result = ', result);
-  // console.log('result = ', toString(result));
-  // console.log('userAnswer = ', userAnswer);
-  // console.log('userAnswer = ', toString(userAnswer));
 
   if (`${result}` === `${userAnswer}`) {
     console.log('Correct!');
