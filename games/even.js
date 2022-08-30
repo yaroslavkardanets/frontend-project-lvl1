@@ -22,7 +22,7 @@ const fullGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const game = gameRound();
     if (!game) {
-      console.log(`Game over, ${userName}!`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
