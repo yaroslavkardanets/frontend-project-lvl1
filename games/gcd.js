@@ -23,9 +23,8 @@ const gameRound = () => {
   };
 
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
-  console.log(`--- greatestDivisor = ${greatestDivisor()}`);
+  // console.log(`--- greatestDivisor = ${greatestDivisor()}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  // console.log(`--- userAnswer = ${userAnswer}`);
 
   if (`${greatestDivisor()}` === `${userAnswer}`) {
     console.log('Correct!');
