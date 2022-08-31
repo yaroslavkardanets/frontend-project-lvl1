@@ -21,8 +21,8 @@ const gameRound = () => {
     result = randomNumber1 * randomNumber2;
   }
 
-  console.log(`What is the result of the expression?: ${randomNumber1} ${operator[randomOperator]} ${randomNumber2}`);
-  console.log(result);
+  console.log(`Question: ${randomNumber1} ${operator[randomOperator]} ${randomNumber2}`);
+  // console.log(result);
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (`${result}` === `${userAnswer}`) {
