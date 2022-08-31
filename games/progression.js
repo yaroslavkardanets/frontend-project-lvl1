@@ -18,7 +18,7 @@ const gameRound = () => {
   const getMissingNumber = range[missingNumber];
 
   range[missingNumber] = '..';
-  console.log(`Question: ${range}`);
+  console.log(`Question: ${range.join(' ')}`);
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (`${getMissingNumber}` === `${userAnswer}`) {
