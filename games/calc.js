@@ -26,7 +26,7 @@ const gameRound = () => {
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (`${result}` === `${userAnswer}`) {
-    // console.log('Correct!');
+    console.log('Correct!');
     return true;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`);
