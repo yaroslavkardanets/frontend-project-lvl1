@@ -9,22 +9,24 @@ import generateRandomRange from '../src/generate-random-range.js';
 const gameRound = () => {
   const randomNumber1 = generateRandomNumber();
   const randomNumber2 = generateRandomNumber();
-  const random = generateRandomRange(1, 3);
-  let operation;
+  const randomOperator = generateRandomRange(0, 2);
+  const operator = ['-', '+', '*'];
+  // console.log(`randomOperator = ${randomOperator}`);
   let result;
-  if (random === 1) {
-    (operation = `${randomNumber1} - ${randomNumber2}`) && (result = randomNumber1 - randomNumber2);
-  } else if (random === 2) {
-    (operation = `${randomNumber1} + ${randomNumber2}`) && (result = randomNumber1 + randomNumber2);
+  if (operator[randomOperator] === 0) {
+    result = randomNumber1 - randomNumber2;
+  } else if (randomOperator === 1) {
+    result = randomNumber1 + randomNumber2;
   } else {
-    (operation = `${randomNumber1} * ${randomNumber2}`) && (result = randomNumber1 * randomNumber2);
+    result = randomNumber1 * randomNumber2;
   }
 
-  console.log(`What is the result of the expression?: ${operation}`);
+  console.log(`What is the result of the expression?: ${randomNumber1} ${operator[randomOperator]} ${randomNumber2}`);
+  console.log(result);
   const userAnswer = readlineSync.question('Your answer: ');
 
   if (`${result}` === `${userAnswer}`) {
-    console.log('Correct!');
+    // console.log('Correct!');
     return true;
   }
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`);
