@@ -13,7 +13,7 @@ const gameRound = () => {
   const operator = ['-', '+', '*'];
   // console.log(`randomOperator = ${randomOperator}`);
   let result;
-  if (operator[randomOperator] === 0) {
+  if (randomOperator === 0) {
     result = randomNumber1 - randomNumber2;
   } else if (randomOperator === 1) {
     result = randomNumber1 + randomNumber2;
