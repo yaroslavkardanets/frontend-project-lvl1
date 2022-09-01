@@ -4,5 +4,9 @@
 ### Codeclimate badges
 [![Maintainability](https://api.codeclimate.com/v1/badges/c3a79baac65d6e129ca8/maintainability)](https://codeclimate.com/github/yaroslavkardanets/frontend-project-lvl1/maintainability)
 
-# Игры разума
+#### Игры разума
 Учебный проект. Реализация пяти видов математических игр.
+
+##### Brain-calc
+Калькулятор с тремя операциями -, +, *
+**![brain-calc] (/images/Brain-calc-01.png "Демонстрация игры")**
