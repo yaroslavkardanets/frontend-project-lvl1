@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
-import { userName } from '../src/index.js';
-import generateRandomRange from '../src/generate-random-range.js';
+import { userName } from '../index.js';
+import generateRandomRange from '../generate-random-range.js';
 
 const gameRound = () => {
   const range = [];

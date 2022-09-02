@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-import { userName } from '../src/index.js';
-import generateRandomNumber from '../src/generate-random-number.js';
-import generateRandomRange from '../src/generate-random-range.js';
+import { userName } from '../index.js';
+import generateRandomNumber from '../generate-random-number.js';
+import generateRandomRange from '../generate-random-range.js';
 
 // const generateRandomOperation = (min, max) => Math.round(Math.random() * (max - min) + min);
 
