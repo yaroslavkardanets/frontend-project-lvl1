@@ -13,7 +13,7 @@
 * сложение
 * умножение
 
-![Демонстрация игры](images/brain-calc-01.png)
+![Демонстрация игры](<img src="./images/brain-calc-01.png" alt='game'>)
 
 #### Brain-even
 Определение четности чисел
