@@ -15,7 +15,7 @@ const gameRound = () => {
   const rangeStop = rangeStart + (rangeStep * rangeSteps);
   const missingNumber = generateRandomRange(0, rangeSteps);
 
-  for (let i = rangeStart; i < rangeStop; i += rangeStep) {
+  for (let i = rangeStart; i <= rangeStop; i += rangeStep) {
     range.push(i);
   }
 
