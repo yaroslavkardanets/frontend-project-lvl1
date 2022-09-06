@@ -3,10 +3,6 @@ import readlineSync from 'readline-sync';
 import { userName } from '../index.js';
 import generateRandomNumber from '../generate-random-number.js';
 
-export const evenGameRules = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-};
-
 const gameRound = () => {
   const randomNumber = generateRandomNumber();
   console.log(`Question: ${randomNumber}`);
