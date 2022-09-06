@@ -1,10 +1,12 @@
 import readlineSync from 'readline-sync';
 
-import { userName } from '../index.js';
-import generateRandomNumber from '../generate-random-number.js';
+// import { /* userName, greeting, */ randomNumber } from '../index.js';
+// import generateRandomNumber from '../generate-random-number.js';
 
+export const evenGameRules = console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
+/*
 const gameRound = () => {
-  const randomNumber = generateRandomNumber();
   console.log(`Question: ${randomNumber}`);
   const userAnswer = readlineSync.question('Your answer: ');
   const isEven = randomNumber % 2 === 0;
@@ -16,17 +18,8 @@ const gameRound = () => {
   console.log('Wrong answer!');
   return false;
 };
+*/
 
 // Надо подумать, как этот модуль будет работать с разными играми
-export const fullGame = () => {
-  for (let i = 0; i < 3; i += 1) {
-    const game = gameRound();
-    if (!game) {
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
-};
 
 // export default fullGame;

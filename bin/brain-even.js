@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 // import evenGameRules from '../src/games/even.js';
 import {
-  greeting, hello, gameRules,
+  /* greeting,  hello, */ gameRules, fullGame,
 } from '../src/index.js';
-import { fullGame } from '../src/games/even.js';
+import { evenGameRules } from '../src/games/even.js';
 
-greeting('Welcome to the Brain Games!');
-hello();
-gameRules('Answer "yes" if the number is even, otherwise answer "no".');
+// greeting();
+// hello();
+gameRules(evenGameRules);
 fullGame();
