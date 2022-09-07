@@ -3,29 +3,20 @@ import generateRandomNumber from './generate-random-number.js';
 
 console.log('Welcome to the Brain Games!');
 
-// export const greeting = () => {
-//   const userName = readlineSync.question('May I have your name? ');
-//   console.log(`Hello, ${userName}!`);
-//   return userName;
-// };
+const userName = readlineSync.question('May I have your name? ');
 
-// const userName = greeting();
-
-export const userName = readlineSync.question('May I have your name? ');
-
-// export const hello = () => {
 console.log(`Hello, ${userName}!`);
-// };
 
 export const gameRules = (rules) => {
   console.log(rules);
 };
 
-const gameRound = () => {
-  const randomNumber = generateRandomNumber();
-  console.log(`Question: ${randomNumber}`);
+// const randomNumber = generateRandomNumber();
+
+const gameRound = (random) => {
+  console.log(`Question: ${random}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const isEven = randomNumber % 2 === 0;
+  const isEven = random % 2 === 0;
 
   if ((isEven && userAnswer === 'yes') || (!isEven && userAnswer === 'no')) {
     console.log('Correct!');
@@ -37,7 +28,7 @@ const gameRound = () => {
 
 export const fullGame = () => {
   for (let i = 0; i < 3; i += 1) {
-    const game = gameRound();
+    const game = gameRound(generateRandomNumber());
     if (!game) {
       console.log(`Let's try again, ${userName}!`);
       return;

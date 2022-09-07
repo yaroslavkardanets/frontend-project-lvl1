@@ -1,9 +1,9 @@
-import readlineSync from 'readline-sync';
+import generateRandomNumber from '../generate-random-number.js';
 
 // import { /* userName, greeting, */ randomNumber } from '../index.js';
 // import generateRandomNumber from '../generate-random-number.js';
 
-export const evenGameRules = console.log('Answer "yes" if the number is even, otherwise answer "no".');
+export const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 /*
 const gameRound = () => {
