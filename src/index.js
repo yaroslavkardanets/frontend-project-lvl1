@@ -11,14 +11,23 @@ export const gameRules = (rules) => {
   console.log(rules);
 };
 
-// const randomNumber = generateRandomNumber();
+// перенести в even.js
+// **************
+const question = () => generateRandomNumber();
 
-const gameRound = (random) => {
-  console.log(`Question: ${random}`);
+const condition = (answer, randomNumber) => {
+  const isEven = randomNumber % 2 === 0;
+  return (isEven && answer === 'yes') || (!isEven && answer === 'no');
+};
+
+// **************
+
+const gameRound = (quest, cond) => {
+  console.log(`Question: ${quest}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const isEven = random % 2 === 0;
 
-  if ((isEven && userAnswer === 'yes') || (!isEven && userAnswer === 'no')) {
+  if (cond === userAnswer) {
+    // console.log('вывод condition: ', condition(userAnswer, question()));
     console.log('Correct!');
     return true;
   }
@@ -26,9 +35,9 @@ const gameRound = (random) => {
   return false;
 };
 
-export const fullGame = () => {
+export const fullGame = (round) => {
   for (let i = 0; i < 3; i += 1) {
-    const game = gameRound(generateRandomNumber());
+    const game = round;
     if (!game) {
       console.log(`Let's try again, ${userName}!`);
       return;
