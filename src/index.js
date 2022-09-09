@@ -11,38 +11,37 @@ export const gameRules = (rules) => {
   console.log(rules);
 };
 
-// перенести в even.js
-// **************
-const question = () => generateRandomNumber();
+const isEven = (randomNum) => randomNum % 2 === 0;
 
-const condition = (answer, randomNumber) => {
-  const isEven = randomNumber % 2 === 0;
-  return (isEven && answer === 'yes') || (!isEven && answer === 'no');
+export const gameRound = () => {
+  const questionAnswer = [];
+
+  const randomNumber = generateRandomNumber();
+  const question = `Question: ${randomNumber}`;
+
+  // const userAnswer = readlineSync.question('Your answer: ');
+  const userAnswer = isEven(randomNumber) ? 'yes' : 'no';
+  // if ((isEven(randomNumber) === 'yes') || (!isEven(randomNumber) === 'no')) {
+  //   console.log('Correct!');
+  //   return true;
+  // }
+  // console.log('Wrong answer!');
+  // return false;
+  return questionAnswer.push[question, userAnswer];
 };
 
-// **************
-
-const gameRound = (quest, cond) => {
-  console.log(`Question: ${quest}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-
-  if (cond === userAnswer) {
-    // console.log('вывод condition: ', condition(userAnswer, question()));
-    console.log('Correct!');
-    return true;
-  }
-  console.log('Wrong answer!');
-  return false;
-};
-
+// Надо подумать, как этот модуль будет работать с разными играми
 export const fullGame = (round) => {
+  const getAnswer = round[1];
   for (let i = 0; i < 3; i += 1) {
+    const userAnswer = readlineSync.question('Your answer: ');
     const game = round;
-    if (!game) {
-      console.log(`Let's try again, ${userName}!`);
+    if (userAnswer === getAnswer) {
+      console.log('Correct!');
+    } else if (!game) {
+      console.log(`Wrong answer!\nLet's try again, ${userName}!`);
       return;
     }
   }
   console.log(`Congratulations, ${userName}!`);
 };
-// export default gameRules;
