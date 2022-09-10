@@ -27,13 +27,15 @@ export const gameRound = () => {
 export const fullGame = (round) => {
   for (let i = 0; i < 3; i += 1) {
     const getAnswer = round[1];
+    // console.log('*** getAnswer: ', getAnswer);
     const question = round[0];
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    const game = round;
+    // const game = round;
+    // console.log('*** game: ', game);
     if (userAnswer === getAnswer) {
       console.log('Correct!');
-    } else if (!game) {
+    } else if (userAnswer !== getAnswer) {
       console.log(`Wrong answer!\nLet's try again, ${userName}!`);
       return;
     }
