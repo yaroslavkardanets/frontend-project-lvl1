@@ -26,9 +26,9 @@ export const gameRound = () => {
 
 export const fullGame = (round) => {
   for (let i = 0; i < 3; i += 1) {
-    const getAnswer = round[1];
+    const [question, getAnswer] = round();
     // console.log('*** getAnswer: ', getAnswer);
-    const question = round[0];
+    // const question = round[0];
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ');
     // const game = round;

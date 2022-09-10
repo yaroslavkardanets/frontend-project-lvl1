@@ -8,4 +8,4 @@ import { evenGameRules } from '../src/games/even.js';
 // greeting();
 // hello();
 gameRules(evenGameRules);
-fullGame(gameRound());
+fullGame(gameRound);
