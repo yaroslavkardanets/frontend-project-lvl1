@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import {
-  evenGameRules, gameRound,
+  evenGameRules, evenGameRound,
 } from '../src/games/even.js';
 import {
   gameRules, fullGame,
 } from '../src/index.js';
 
 gameRules(evenGameRules);
-fullGame(gameRound);
+fullGame(evenGameRound);
