@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import hello from '../src/index.js';
+import {
+  gameRules, fullGame,
+} from '../src/index.js';
 // import progressionGameRules from '../src/progression-rules.js';
-import { progressionGameRules, fullGame } from '../src/games/progression.js';
+import { progressionGameRules, progressionGameRound } from '../src/games/progression.js';
 
-hello();
-progressionGameRules();
-fullGame();
+gameRules(progressionGameRules);
+fullGame(progressionGameRound);
