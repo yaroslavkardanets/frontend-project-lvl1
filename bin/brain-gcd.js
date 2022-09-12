@@ -1,8 +1,14 @@
 #!/usr/bin/env node
-import hello from '../src/index.js';
+// import hello from '../src/index.js';
 // import gcdGameRules from '../src/gcd-rules.js';
-import { gcdGameRules, fullGame } from '../src/games/gcd.js';
+import { gcdGameRules, gcdGameRound } from '../src/games/gcd.js';
 
-hello();
-gcdGameRules();
-fullGame();
+import {
+  gameRules, fullGame,
+} from '../src/index.js';
+
+gameRules(gcdGameRules);
+fullGame(gcdGameRound);
+
+// gcdGameRules();
+// fullGame();
