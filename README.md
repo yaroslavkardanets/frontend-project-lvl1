@@ -13,8 +13,7 @@
 * сложение
 * умножение
 
-![Демонстрация игры](<img src=".
-https://asciinema.org/a/WXH9qObe00ixSmWwTjVLHUz28" alt='game'>)
+<a href="https://asciinema.org/connect/5a24669b-82dc-4adb-9441-5f7e579a0bc2" target="_blank">Демонстрация Brain-calc</a>
 
 #### Brain-even
 Определение четности чисел
