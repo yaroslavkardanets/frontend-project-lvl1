@@ -1,8 +1,10 @@
 #!/usr/bin/env node
-import hello from '../src/index.js';
+import {
+  gameRules, fullGame,
+} from '../src/index.js';
 // import primeGameRules from '../src/prime-rules.js';
-import { primeGameRules, fullGame } from '../src/games/prime.js';
+import { primeGameRules, primeGameRound } from '../src/games/prime.js';
 
-hello();
-primeGameRules();
-fullGame();
+// hello();
+gameRules(primeGameRules);
+fullGame(primeGameRound);
