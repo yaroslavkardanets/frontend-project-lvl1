@@ -14,7 +14,7 @@
 * умножение
 
 ![Демонстрация игры](<img src=".
-/images/Brain-calc-01.png" alt='game'>)
+https://asciinema.org/a/WXH9qObe00ixSmWwTjVLHUz28" alt='game'>)
 
 #### Brain-even
 Определение четности чисел
