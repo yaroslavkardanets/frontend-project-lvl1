@@ -18,24 +18,24 @@
 #### Brain-even
 Определение четности чисел
 
-![Демонстрация игры](images/brain-even-01.png)
+<a href=" https://asciinema.org/a/xDifIMktWU8Y5aRptA0ApcP1B" target="_blank">Демонстрация Brain-even</a>
 
 #### Brain-games
 Логика приветствия для всех игр
 
-![Демонстрация](images/brain-games-01.png)
+<a href="https://asciinema.org/a/YBLKE45oMNz4cGAnJHm6p2GF3" target="_blank">Демонстрация Brain-games</a>
 
 #### Brain-gcd
 Поиск наибольшего общего делителя для двух чисел
 
-![Демонстрация игры](images/brain-gcd-01.png)
+<a href="https://asciinema.org/a/POf0yQTN5BFgcPTXJOG1AF1In" target="_blank">Демонстрация Brain-gcd</a>
 
 #### Brain-prime
 Определение простого числа
 
-![Демонстрация игры](images/brain-prime-01.png)
+<a href="https://asciinema.org/a/t30UxioRzbiZ293xg3cbfvvBh" target="_blank">Демонстрация Brain-prime</a>
 
 #### Brain-progression
 Определение недостающего числа в цепочке арифметической прогрессии
 
-![Демонстрация игры](images/brain-progression-01.png)
+<a href="https://asciinema.org/a/lijANdYKST3vZYPkEn1HVsrtf" target="_blank">Демонстрация Brain-progression</a>
