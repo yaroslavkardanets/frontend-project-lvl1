@@ -22,11 +22,11 @@ const calcGameRound = () => {
     result = randomNumber1 * randomNumber2;
   }
   // console.log('*** result:', result);
-  const resultToString = `${result}`;
+  // const resultToString = `${result}`;
   // console.log('*** resultToString:', resultToString);
   const question = `Question: ${randomNumber1} ${operator[randomOperator]} ${randomNumber2}`;
   // console.log('*** question:', question);
-  questionCondition.push(question, resultToString);
+  questionCondition.push(question, `${result}`);
   // console.log('*** questionCondition: ', questionCondition);
   return questionCondition;
 };
