@@ -1,7 +1,7 @@
 // import readlineSync from 'readline-sync';
 
 // import { userName } from '../index.js';
-import generateRandomNumber from '../generate-random-number.js';
+import generateRandomRange from '../generate-random-range.js';
 
 export const gcdGameRules = 'Find the greatest common divisor of given numbers.';
 // export const gcdGameRules = () => {
@@ -10,8 +10,8 @@ export const gcdGameRules = 'Find the greatest common divisor of given numbers.'
 
 export const gcdGameRound = () => {
   const questionCondition = [];
-  const randomNumber1 = generateRandomNumber();
-  const randomNumber2 = generateRandomNumber();
+  const randomNumber1 = generateRandomRange();
+  const randomNumber2 = generateRandomRange();
 
   const greatestDivisor = () => {
     const biggestNumber = Math.max(randomNumber1, randomNumber2);
@@ -26,7 +26,6 @@ export const gcdGameRound = () => {
     }
   };
   // console.log('*** greatestDivisor: ', greatestDivisor());
-  // const greatestDivisorToString =
 
   const question = `Question: ${randomNumber1} ${randomNumber2}`;
   questionCondition.push(question, `${greatestDivisor()}`);

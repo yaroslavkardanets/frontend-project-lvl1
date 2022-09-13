@@ -1,13 +1,13 @@
 // import readlineSync from 'readline-sync';
 
 // import { userName } from '../index.js';
-import generateRandomNumber from '../generate-random-number.js';
+import generateRandomRange from '../generate-random-range.js';
 
 export const primeGameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const primeGameRound = () => {
   const questionCondition = [];
-  const randomNumber = generateRandomNumber();
+  const randomNumber = generateRandomRange();
 
   const isPrime = () => {
     if (randomNumber === 0 || randomNumber === 1 || randomNumber === 2) {
