@@ -17,7 +17,7 @@ const runGame = (gameRules, round) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === getAnswer) {
       console.log('Correct!');
-    } else if (userAnswer !== getAnswer) {
+    } else {
       console.log(`Wrong answer!\nLet's try again, ${userName}!`);
       return;
     }
