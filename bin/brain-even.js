@@ -2,9 +2,7 @@
 import {
   evenGameRules, evenGameRound,
 } from '../src/games/even.js';
-import {
-  gameRules, fullGame,
-} from '../src/index.js';
+import runGame from '../src/index.js';
 
-gameRules(evenGameRules);
-fullGame(evenGameRound);
+// gameRules(evenGameRules);
+runGame(evenGameRules, evenGameRound);

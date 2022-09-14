@@ -5,8 +5,9 @@
 import generateRandomRange from '../generate-random-range.js';
 
 // const generateRandomOperation = (min, max) => Math.round(Math.random() * (max - min) + min);
+export const calcGameRules = 'What is the result of the expression?';
 
-const calcGameRound = () => {
+export const calcGameRound = () => {
   const questionCondition = [];
   const randomNumber1 = generateRandomRange();
   const randomNumber2 = generateRandomRange();
@@ -31,4 +32,4 @@ const calcGameRound = () => {
   return questionCondition;
 };
 
-export default calcGameRound;
+// export default calcGameRound;
