@@ -1,9 +1,7 @@
-// import readlineSync from 'readline-sync';
-
-// import { userName } from '../index.js';
+import runGame from '../index.js';
 import generateRandomRange from '../generate-random-range.js';
 
-export const primeGameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const primeGameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num === 0 || num === 1 || num === 2) {
@@ -23,7 +21,7 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-export const primeGameRound = () => {
+const primeGameRound = () => {
   const questionCondition = [];
   const randomNumber = generateRandomRange();
 
@@ -35,3 +33,5 @@ export const primeGameRound = () => {
   return questionCondition;
   // const userAnswer = readlineSync.question('Your answer: ');
 };
+
+export default () => runGame(primeGameRules, primeGameRound);

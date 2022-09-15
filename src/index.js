@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// export const gameRules = (rules) => {
-//   console.log(rules);
-// };
 const roundsCount = 3;
 
 const runGame = (gameRules, round) => {

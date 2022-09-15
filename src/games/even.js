@@ -1,9 +1,10 @@
+import runGame from '../index.js';
 import generateRandomRange from '../generate-random-range.js';
 
-export const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
-export const evenGameRound = () => {
+const evenGameRound = () => {
   const questionCondition = [];
   const randomNumber = generateRandomRange();
   const question = `Question: ${randomNumber}`;
@@ -12,3 +13,5 @@ export const evenGameRound = () => {
   questionCondition.push(conditionOfUserAnswer);
   return questionCondition;
 };
+
+export default () => runGame(evenGameRules, evenGameRound);
