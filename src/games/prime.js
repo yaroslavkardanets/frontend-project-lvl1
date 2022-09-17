@@ -22,16 +22,10 @@ const isPrime = (num) => {
 };
 
 const primeGameRound = () => {
-  const questionCondition = [];
   const randomNumber = generateRandomRange();
-
-  // console.log('*** isPrime: ', isPrime(randomNumber));
-
   const question = `Question: ${randomNumber}`;
-  questionCondition.push(question, isPrime(randomNumber));
-  // console.log('*** questionCondition: ', questionCondition);
-  return questionCondition;
-  // const userAnswer = readlineSync.question('Your answer: ');
+
+  return [question, isPrime(randomNumber)];
 };
 
 export default () => runGame(primeGameRules, primeGameRound);
