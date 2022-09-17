@@ -11,13 +11,13 @@ const greatestDivisor = (num1, num2) => {
 };
 
 const gcdGameRound = () => {
-  const questionCondition = [];
+  // const questionCondition = [];
   const randomNumber1 = generateRandomRange();
   const randomNumber2 = generateRandomRange();
 
   const question = `Question: ${randomNumber1} ${randomNumber2}`;
-  questionCondition.push(question, `${greatestDivisor(randomNumber1, randomNumber2)}`);
-  return questionCondition;
+  // questionCondition.push(question, `${greatestDivisor(randomNumber1, randomNumber2)}`);
+  return [question, `${greatestDivisor(randomNumber1, randomNumber2)}`];
 };
 
 export default () => runGame(gcdGameRules, gcdGameRound);
