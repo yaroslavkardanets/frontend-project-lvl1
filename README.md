@@ -4,6 +4,9 @@
 ### Codeclimate badges
 [![Maintainability](https://api.codeclimate.com/v1/badges/c3a79baac65d6e129ca8/maintainability)](https://codeclimate.com/github/yaroslavkardanets/frontend-project-lvl1/maintainability)
 
+## Setup
+make install
+
 # ИГРЫ РАЗУМА
 Учебный проект. Реализация пяти видов математических игр.
 
