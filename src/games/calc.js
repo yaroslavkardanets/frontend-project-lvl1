@@ -2,29 +2,29 @@ import runGame from '../index.js';
 import generateRandomRange from '../generate-random-range.js';
 
 const calcGameRules = 'What is the result of the expression?';
+const calculate = (num1, num2, operator) => {
+  // console.log(`*** randomOperator = ${randomOperator}`);
+  let rightAnswer;
+  if (operator === 0) {
+    rightAnswer = num1 - num2;
+  } else if (operator === 1) {
+    rightAnswer = num1 + num2;
+  } else {
+    rightAnswer = num1 * num2;
+  }
+  return rightAnswer;
+};
 
 const calcGameRound = () => {
-  const questionCondition = [];
-  const randomNumber1 = generateRandomRange();
-  const randomNumber2 = generateRandomRange();
-  const randomOperator = generateRandomRange(0, 2);
+  const randomNumberOne = generateRandomRange();
+  const randomNumberTwo = generateRandomRange();
   const operator = ['-', '+', '*'];
-  // console.log(`*** randomOperator = ${randomOperator}`);
-  let result;
-  if (randomOperator === 0) {
-    result = randomNumber1 - randomNumber2;
-  } else if (randomOperator === 1) {
-    result = randomNumber1 + randomNumber2;
-  } else {
-    result = randomNumber1 * randomNumber2;
-  }
-  // console.log('*** result:', result);
-  // console.log('*** resultToString:', resultToString);
-  const question = `Question: ${randomNumber1} ${operator[randomOperator]} ${randomNumber2}`;
-  // console.log('*** question:', question);
-  questionCondition.push(question, `${result}`);
-  // console.log('*** questionCondition: ', questionCondition);
-  return questionCondition;
+  const randomOperator = generateRandomRange(0, operator.length - 1);
+  const rightAnswer = calculate(randomNumberOne, randomNumberTwo, randomOperator);
+
+  const question = `Question: ${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`;
+
+  return [question, `${rightAnswer}`];
 };
 
 export default () => runGame(calcGameRules, calcGameRound);
