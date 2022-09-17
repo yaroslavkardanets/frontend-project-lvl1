@@ -1,11 +1,11 @@
 import runGame from '../index.js';
-import generateRandomRange from '../generate-random-range.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
 const evenGameRound = () => {
-  const randomNumber = generateRandomRange();
+  const randomNumber = generateRandomNumber();
   // const question = `Question: ${randomNumber}`;
   const conditionOfUserAnswer = isEven(randomNumber) ? 'yes' : 'no';
 

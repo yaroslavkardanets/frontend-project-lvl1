@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import generateRandomRange from '../generate-random-range.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const progressionGameRules = 'What number is missing in the progression?';
 
@@ -13,11 +13,11 @@ const getProgression = (start, long, step) => {
 };
 
 const progressionGameRound = () => {
-  const rangeStart = generateRandomRange(0, 50);
-  const rangeStepsAmmount = generateRandomRange(5, 10);
-  const rangeStepInterval = generateRandomRange(1, 10);
+  const rangeStart = generateRandomNumber(0, 50);
+  const rangeStepsAmmount = generateRandomNumber(5, 10);
+  const rangeStepInterval = generateRandomNumber(1, 10);
   const rangeStop = rangeStart + (rangeStepInterval * (rangeStepsAmmount));
-  const missingNumber = generateRandomRange(0, rangeStepsAmmount - 1);
+  const missingNumber = generateRandomNumber(0, rangeStepsAmmount - 1);
   const progression = getProgression(rangeStart, rangeStop, rangeStepInterval);
   const getMissingNumber = progression[missingNumber];
   progression[missingNumber] = '..';

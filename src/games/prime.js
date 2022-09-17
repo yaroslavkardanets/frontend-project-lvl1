@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import generateRandomRange from '../generate-random-range.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const primeGameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -22,7 +22,7 @@ const isPrime = (num) => {
 };
 
 const primeGameRound = () => {
-  const randomNumber = generateRandomRange();
+  const randomNumber = generateRandomNumber();
   const prime = isPrime(randomNumber) ? 'yes' : 'no';
 
   return [`${randomNumber}`, prime];
