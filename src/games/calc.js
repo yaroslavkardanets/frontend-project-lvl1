@@ -22,9 +22,9 @@ const calcGameRound = () => {
   const randomOperator = generateRandomRange(0, operator.length - 1);
   const rightAnswer = calculate(randomNumberOne, randomNumberTwo, randomOperator);
 
-  const question = `Question: ${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`;
+  // const question = `Question: ${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`;
 
-  return [question, `${rightAnswer}`];
+  return [`${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`, `${rightAnswer}`];
 };
 
 export default () => runGame(calcGameRules, calcGameRound);

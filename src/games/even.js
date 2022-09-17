@@ -6,10 +6,10 @@ const isEven = (num) => num % 2 === 0;
 
 const evenGameRound = () => {
   const randomNumber = generateRandomRange();
-  const question = `Question: ${randomNumber}`;
+  // const question = `Question: ${randomNumber}`;
   const conditionOfUserAnswer = isEven(randomNumber) ? 'yes' : 'no';
 
-  return [question, conditionOfUserAnswer];
+  return [`${randomNumber}`, conditionOfUserAnswer];
 };
 
 export default () => runGame(evenGameRules, evenGameRound);

@@ -23,9 +23,9 @@ const isPrime = (num) => {
 
 const primeGameRound = () => {
   const randomNumber = generateRandomRange();
-  const question = `Question: ${randomNumber}`;
+  // const question = `Question: ${randomNumber}`;
 
-  return [question, isPrime(randomNumber)];
+  return [`${randomNumber}`, isPrime(randomNumber)];
 };
 
 export default () => runGame(primeGameRules, primeGameRound);

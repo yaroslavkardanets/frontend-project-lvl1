@@ -15,9 +15,9 @@ const gcdGameRound = () => {
   const randomNumber1 = generateRandomRange();
   const randomNumber2 = generateRandomRange();
 
-  const question = `Question: ${randomNumber1} ${randomNumber2}`;
+  // const question = `Question: ${randomNumber1} ${randomNumber2}`;
   // questionCondition.push(question, `${greatestDivisor(randomNumber1, randomNumber2)}`);
-  return [question, `${greatestDivisor(randomNumber1, randomNumber2)}`];
+  return [`${randomNumber1} ${randomNumber2}`, `${greatestDivisor(randomNumber1, randomNumber2)}`];
 };
 
 export default () => runGame(gcdGameRules, gcdGameRound);

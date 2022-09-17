@@ -10,7 +10,7 @@ const runGame = (gameRules, round) => {
 
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, getAnswer] = round();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === getAnswer) {
       console.log('Correct!');
