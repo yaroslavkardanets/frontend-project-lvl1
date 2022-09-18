@@ -3,7 +3,6 @@ import generateRandomNumber from '../generate-random-number.js';
 
 const calcGameRules = 'What is the result of the expression?';
 const calculate = (num1, num2, operator) => {
-  // console.log(`*** randomOperator = ${randomOperator}`);
   let rightAnswer;
   if (operator === 0) {
     rightAnswer = num1 - num2;
@@ -18,13 +17,11 @@ const calculate = (num1, num2, operator) => {
 const calcGameRound = () => {
   const randomNumberOne = generateRandomNumber();
   const randomNumberTwo = generateRandomNumber();
-  const operator = ['-', '+', '*'];
-  const randomOperator = generateRandomNumber(0, operator.length - 1);
-  const rightAnswer = calculate(randomNumberOne, randomNumberTwo, randomOperator);
+  const operators = ['-', '+', '*'];
+  const randomOperatorIndex = generateRandomNumber(0, operators.length - 1);
+  const rightAnswer = calculate(randomNumberOne, randomNumberTwo, randomOperatorIndex);
 
-  // const question = `Question: ${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`;
-
-  return [`${randomNumberOne} ${operator[randomOperator]} ${randomNumberTwo}`, `${rightAnswer}`];
+  return [`${randomNumberOne} ${operators[randomOperatorIndex]} ${randomNumberTwo}`, `${rightAnswer}`];
 };
 
 export default () => runGame(calcGameRules, calcGameRound);
