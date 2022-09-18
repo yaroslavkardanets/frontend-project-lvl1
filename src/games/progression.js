@@ -14,10 +14,10 @@ const getProgression = (start, long, step) => {
 
 const progressionGameRound = () => {
   const rangeStart = generateRandomNumber(0, 50);
-  const rangeStepsAmmount = generateRandomNumber(5, 10);
+  const rangeStepsAmount = generateRandomNumber(5, 10);
   const rangeStepInterval = generateRandomNumber(1, 10);
-  const rangeStop = rangeStart + (rangeStepInterval * (rangeStepsAmmount));
-  const missingNumber = generateRandomNumber(0, rangeStepsAmmount - 1);
+  const rangeStop = rangeStart + (rangeStepInterval * (rangeStepsAmount));
+  const missingNumber = generateRandomNumber(0, rangeStepsAmount - 1);
   const progression = getProgression(rangeStart, rangeStop, rangeStepInterval);
   const getMissingNumber = progression[missingNumber];
   progression[missingNumber] = '..';
