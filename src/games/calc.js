@@ -3,15 +3,15 @@ import generateRandomNumber from '../generate-random-number.js';
 
 const calcGameRules = 'What is the result of the expression?';
 const calculate = (num1, num2, operator) => {
-  let rightAnswer;
-  if (operator === 0) {
-    rightAnswer = num1 - num2;
-  } else if (operator === 1) {
-    rightAnswer = num1 + num2;
-  } else {
-    rightAnswer = num1 * num2;
+  // let rightAnswer;
+  switch (operator) {
+    case 0:
+      return num1 - num2;
+    case 1:
+      return num1 + num2;
+    default:
+      return num1 * num2;
   }
-  return rightAnswer;
 };
 
 const calcGameRound = () => {
